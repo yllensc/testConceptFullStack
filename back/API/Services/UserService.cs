@@ -189,20 +189,38 @@ namespace API.Services
         }
         private async Task<AuthTokenResponseDto> SaveHistorialRefreshToken(int idUser, string token, string refreshToken)
         {
-            var historialRefreshToken = new HistorialRefreshToken
-            {
-                IdUser = idUser,
-                Token = token,
-                RefreshToken = refreshToken,
-                DateCreated = DateTime.UtcNow,
-                DateExpired = DateTime.UtcNow.AddMinutes(2)
-            };
+            var existingHistorialRefreshToken = await _unitOfWork.HistorialTokens.GetAllAsync();
+            var registerToken = existingHistorialRefreshToken.FirstOrDefault(h => h.IdUser == idUser);
 
-            _unitOfWork.HistorialTokens.Add(historialRefreshToken);
-            await _unitOfWork.SaveAsync();
+            if (registerToken != null)
+            {
+                // Actualizar el registro existente
+                registerToken.Token = token;
+                registerToken.RefreshToken = refreshToken;
+                registerToken.DateCreated = DateTime.UtcNow;
+                registerToken.DateExpired = DateTime.UtcNow.AddMinutes(2);
+
+                await _unitOfWork.SaveAsync();
+            }
+            else
+            {
+                // Agregar un nuevo registro
+                var historialRefreshToken = new HistorialRefreshToken
+                {
+                    IdUser = idUser,
+                    Token = token,
+                    RefreshToken = refreshToken,
+                    DateCreated = DateTime.UtcNow,
+                    DateExpired = DateTime.UtcNow.AddMinutes(2)
+                };
+
+                _unitOfWork.HistorialTokens.Add(historialRefreshToken);
+                await _unitOfWork.SaveAsync();
+            }
 
             return new AuthTokenResponseDto { Token = token, RefreshToken = refreshToken, Result = true, Msg = "Ok" };
         }
+
 
 
 
