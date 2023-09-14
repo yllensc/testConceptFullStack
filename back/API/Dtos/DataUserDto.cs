@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace API.Dtos
 {
@@ -13,7 +13,8 @@ namespace API.Dtos
         public string Email { get; set; }
         public List<string> Roles { get; set; }
         public string Token { get; set; }
+        [JsonIgnore] // ->this attribute restricts the property to be shown in the result
         public string RefreshToken { get; set; }
-        public string Prueba {get; set; }
+        public DateTime RefreshTokenExpiration { get; set; }
     }
 }

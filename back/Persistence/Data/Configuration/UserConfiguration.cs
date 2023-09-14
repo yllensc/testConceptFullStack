@@ -38,6 +38,10 @@ namespace Persistence.Data.Configurations;
             pk =>{
                 pk.HasKey(ur => new {ur.IdUserFK, ur.IdRolFK});
             });
+        
+        builder.HasMany(p => p.RefreshTokens)
+                .WithOne(p => p.User)
+                .HasForeignKey(p => p.UserId);
 
 
     }

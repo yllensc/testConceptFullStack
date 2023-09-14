@@ -22,3 +22,15 @@ D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Domine\obj\Deb
 D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Domine\obj\Debug\net7.0\refint\Domine.dll
 D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Domine\obj\Debug\net7.0\Domine.pdb
 D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Domine\obj\Debug\net7.0\ref\Domine.dll
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\bin\Debug\net7.0\Domine.deps.json
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\bin\Debug\net7.0\Domine.dll
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\bin\Debug\net7.0\Domine.pdb
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\obj\Debug\net7.0\Domine.csproj.AssemblyReference.cache
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\obj\Debug\net7.0\Domine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\obj\Debug\net7.0\Domine.AssemblyInfoInputs.cache
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\obj\Debug\net7.0\Domine.AssemblyInfo.cs
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\obj\Debug\net7.0\Domine.csproj.CoreCompileInputs.cache
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\obj\Debug\net7.0\Domine.dll
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\obj\Debug\net7.0\refint\Domine.dll
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\obj\Debug\net7.0\Domine.pdb
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Domine\obj\Debug\net7.0\ref\Domine.dll

@@ -28,3 +28,18 @@ D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\ob
 D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\refint\Persistence.dll
 D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.pdb
 D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\ref\Persistence.dll
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.deps.json
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.dll
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.pdb
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Domine.dll
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Domine.pdb
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfo.cs
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.csproj.CopyComplete
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.dll
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\refint\Persistence.dll
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.pdb
+C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\ref\Persistence.dll

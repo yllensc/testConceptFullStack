@@ -85,6 +85,34 @@ namespace Persistence.Data.Migrations
                     b.ToTable("HistorialRefreshToken", (string)null);
                 });
 
+            modelBuilder.Entity("Domine.Entities.RefreshTokenOp2", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Expires")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime?>("Revoked")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshToken", (string)null);
+                });
+
             modelBuilder.Entity("Domine.Entities.Rol", b =>
                 {
                     b.Property<int>("Id")
@@ -158,6 +186,17 @@ namespace Persistence.Data.Migrations
                     b.Navigation("IdUserNavigation");
                 });
 
+            modelBuilder.Entity("Domine.Entities.RefreshTokenOp2", b =>
+                {
+                    b.HasOne("Domine.Entities.User", "User")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Domine.Entities.UserRol", b =>
                 {
                     b.HasOne("Domine.Entities.Rol", "Rol")
@@ -185,6 +224,8 @@ namespace Persistence.Data.Migrations
             modelBuilder.Entity("Domine.Entities.User", b =>
                 {
                     b.Navigation("HistorialRefreshTokens");
+
+                    b.Navigation("RefreshTokens");
 
                     b.Navigation("UsersRoles");
                 });

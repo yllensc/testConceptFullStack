@@ -6,5 +6,6 @@ namespace Domine.Interfaces
     {
         Task<User>GetSomeUserLogic(string id);
         Task<User> GetUserName(string userName);
+        Task<User> GetByRefreshTokenAsync(string username);
     }
 }

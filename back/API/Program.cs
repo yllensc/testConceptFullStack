@@ -6,17 +6,15 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.ConfigureCors();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddJwt(builder.Configuration);
 builder.Services.AddApplicationServices();
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
-
 //Authorization
 builder.Services.AddAuthorization(opts =>{
     opts.DefaultPolicy = new AuthorizationPolicyBuilder()
@@ -24,7 +22,6 @@ builder.Services.AddAuthorization(opts =>{
         .AddRequirements(new GlobalVerbRoleRequirement())
         .Build();
 });
-
 //Comunicación
 builder.Services.AddDbContext<TestFullStackDbContext>(options =>{
 string ConnectionStrings = builder.Configuration.GetConnectionString("ConexMySQLCampus");

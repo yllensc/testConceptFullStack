@@ -58,7 +58,6 @@ namespace API.Services
 
             }
         }
-
         public async Task<string> AddRoleAsync(AddRoleDto userToAdd)
         {
             var user = await _unitOfWork.Users
@@ -70,7 +69,7 @@ namespace API.Services
             var result = _passwordHasher.VerifyHashedPassword(user, user.Password, userToAdd.Password);
             if (result == PasswordVerificationResult.Success)
             {
-                var existRol = _unitOfWork.GetRoles()
+                var existRol = _unitOfWork.Roles
                                             .Find(r => r.RolName.ToLower() == userToAdd.Rol.ToLower())
                                             .FirstOrDefault();
                 if (existRol != null)
@@ -90,7 +89,6 @@ namespace API.Services
             }
             return "Credenciales incorrectas, sorry";
         }
-
         public async Task<DataUserDto> GetTokenAsync(LogDto userLog)
         {
             DataUserDto dataUserDto = new DataUserDto();
@@ -110,7 +108,6 @@ namespace API.Services
                     dataUserDto.AuthStatus = true;
                     dataUserDto.Message = "OK";
                     JwtSecurityToken jwtSecurityToken = CreateJwtToken(user);
-                    string refreshTokenCreated = GenerarRefreshToken();
                     string token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
                     dataUserDto.Token = token;
                     dataUserDto.Email = user.Email;
@@ -118,21 +115,30 @@ namespace API.Services
                     dataUserDto.Roles = user.Roles
                                         .Select(x => x.RolName)
                                         .ToList();
-                    dataUserDto.RefreshToken = refreshTokenCreated;
+                     if (user.RefreshTokens.Any(a => a.IsActive))
+            {
+                var activeRefreshToken = user.RefreshTokens.Where(a => a.IsActive == true).FirstOrDefault();
+                dataUserDto.RefreshToken = activeRefreshToken.Token;
+                dataUserDto.RefreshTokenExpiration = activeRefreshToken.Expires;
+            }
+            else
+            {
+                var refreshToken = CreateRefreshToken();
+                dataUserDto.RefreshToken = refreshToken.Token;
+                dataUserDto.RefreshTokenExpiration = refreshToken.Expires;
+                user.RefreshTokens.Add(refreshToken);
+                _unitOfWork.Users.Update(user);
+                await _unitOfWork.SaveAsync();
+            }
 
-                    await SaveHistorialRefreshToken(user.Id, token, refreshTokenCreated);
-                    return dataUserDto;
-                }
-                else
-                {
-                    dataUserDto.AuthStatus = false;
-                    dataUserDto.Message = $"credenciales incorrectas para el usuario {userLog.UserName}";
-                    return dataUserDto;
-                }
+            return dataUserDto;
+        }
+        dataUserDto.AuthStatus = false;
+        dataUserDto.Message = $"Credenciales incorrectas para el usuario {user.UserName}.";
+        return dataUserDto;
             }
 
         }
-
         private JwtSecurityToken CreateJwtToken(User user)
         {
             if (user != null)
@@ -174,19 +180,20 @@ namespace API.Services
                 throw new ArgumentNullException(nameof(user), "El usuario no puede ser nulo");
             }
         }
-        private string GenerarRefreshToken()
+        private RefreshTokenOp2 CreateRefreshToken()
+    {
+        var randomNumber = new byte[32];
+        using (var generator = RandomNumberGenerator.Create())
         {
-
-            var byteArray = new byte[64];
-            var refreshToken = "";
-
-            using (var rng = RandomNumberGenerator.Create())
+            generator.GetBytes(randomNumber);
+            return new RefreshTokenOp2
             {
-                rng.GetBytes(byteArray);
-                refreshToken = Convert.ToBase64String(byteArray);
-            }
-            return refreshToken;
+                Token = Convert.ToBase64String(randomNumber),
+                Expires = DateTime.UtcNow.AddDays(10),
+                Created = DateTime.UtcNow
+            };
         }
+    }
         private async Task<AuthTokenResponseDto> SaveHistorialRefreshToken(int idUser, string token, string refreshToken)
         {
             var existingHistorialRefreshToken = await _unitOfWork.HistorialTokens.GetAllAsync();
@@ -220,35 +227,48 @@ namespace API.Services
 
             return new AuthTokenResponseDto { Token = token, RefreshToken = refreshToken, Result = true, Msg = "Ok" };
         }
+         public async Task<DataUserDto> RefreshTokenAsync(string refreshToken)
+    {
+        var dataUserDto = new DataUserDto();
 
+        var usuario = await _unitOfWork.Users
+                        .GetByRefreshTokenAsync(refreshToken);
 
-
-
-        public async Task<AuthTokenResponseDto> GetRefreshToken(RefreshTokenDto refreshRequest, int idUsuario)
+        if (usuario == null)
         {
-            var historialTokens = await _unitOfWork.HistorialTokens.GetAllAsync(); // Esperar la tarea y obtener la secuencia
-            var refreshTokenFound = historialTokens.FirstOrDefault(x =>
-                x.Token == refreshRequest.TokenExpired &&
-                x.RefreshToken == refreshRequest.RefreshToken &&
-                x.IdUser == idUsuario);
-
-            if (refreshTokenFound == null)
-            {
-                return new AuthTokenResponseDto { Result = false, Msg = "No existe refreshToken" };
-            }
-            var user = await _unitOfWork.Users.GetSomeUserLogic(idUsuario.ToString());
-
-            if (user == null)
-            {
-                return new AuthTokenResponseDto { Result = false, Msg = "No existe el usuario" };
-            }
-            var refreshTokenCreated = GenerarRefreshToken();
-            var tokenCreated = CreateJwtToken(user);
-            string token = new JwtSecurityTokenHandler().WriteToken(tokenCreated);
-            var result = await SaveHistorialRefreshToken(idUsuario, token, refreshTokenCreated);
-            return result;
+            dataUserDto.AuthStatus = false;
+            dataUserDto.Message = $"Token is not assigned to any user.";
+            return dataUserDto;
         }
 
+        var refreshTokenBd = usuario.RefreshTokens.Single(x => x.Token == refreshToken);
+
+        if (!refreshTokenBd.IsActive)
+        {
+            dataUserDto.AuthStatus = false;
+            dataUserDto.Message = $"Token is not active.";
+            return dataUserDto;
+        }
+        //Revoque the current refresh token and
+        refreshTokenBd.Revoked = DateTime.UtcNow;
+        //generate a new refresh token and save it in the database
+        var newRefreshToken = CreateRefreshToken();
+        usuario.RefreshTokens.Add(newRefreshToken);
+        _unitOfWork.Users.Update(usuario);
+        await _unitOfWork.SaveAsync();
+        //Generate a new Json Web Token
+        dataUserDto.AuthStatus = true;
+        JwtSecurityToken jwtSecurityToken = CreateJwtToken(usuario);
+        dataUserDto.Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+        dataUserDto.Email = usuario.Email;
+        dataUserDto.UserName = usuario.UserName;
+        dataUserDto.Roles = usuario.Roles
+                                        .Select(u => u.RolName)
+                                        .ToList();
+        dataUserDto.RefreshToken = newRefreshToken.Token;
+        dataUserDto.RefreshTokenExpiration = newRefreshToken.Expires;
+        return dataUserDto;
+    }
         public async Task<bool> ValidateToken(string token, IConfiguration configuration)
         {
 
@@ -268,17 +288,16 @@ namespace API.Services
                     ValidateLifetime = true,
                 };
 
-                SecurityToken securityToken;
-                ClaimsPrincipal claimsPrincipal = tokenHandler.ValidateToken(token, validationParameters, out securityToken);
+                ClaimsPrincipal claimsPrincipal = tokenHandler.ValidateToken(token, validationParameters, out SecurityToken securityToken);
 
                 //token es válido
                 return true;
             }
-            catch (SecurityTokenExpiredException ex)
+            catch (SecurityTokenExpiredException)
             {
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var tokenUser = tokenHandler.ReadJwtToken(token);
-                var idUsuarioClaim = tokenUser.Claims.FirstOrDefault(claim => claim.Type == "idUsuario");
+                var idUsuarioClaim = tokenUser.Claims.FirstOrDefault(claim => claim.Type == "uid");
 
                 if (idUsuarioClaim != null)
                 {
@@ -295,12 +314,12 @@ namespace API.Services
                 return false;
             }
 
-            catch (SecurityTokenInvalidSignatureException ex)
+            catch (SecurityTokenInvalidSignatureException)
             {
                 //token corrupto
                 return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

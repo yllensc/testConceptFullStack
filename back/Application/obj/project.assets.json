@@ -5153,37 +5153,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\APT01-61\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\APT01-61\\Documents\\tokenClass140923\\testConceptFullStack\\back\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\obj\\",
+      "projectPath": "C:\\Users\\APT01-61\\Documents\\tokenClass140923\\testConceptFullStack\\back\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\APT01-61\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\APT01-61\\Documents\\tokenClass140923\\testConceptFullStack\\back\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\APT01-61\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Domine\\Domine.csproj": {
-              "projectPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Domine\\Domine.csproj"
+            "C:\\Users\\APT01-61\\Documents\\tokenClass140923\\testConceptFullStack\\back\\Domine\\Domine.csproj": {
+              "projectPath": "C:\\Users\\APT01-61\\Documents\\tokenClass140923\\testConceptFullStack\\back\\Domine\\Domine.csproj"
             },
-            "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Persistence\\Persistence.csproj": {
-              "projectPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Persistence\\Persistence.csproj"
+            "C:\\Users\\APT01-61\\Documents\\tokenClass140923\\testConceptFullStack\\back\\Persistence\\Persistence.csproj": {
+              "projectPath": "C:\\Users\\APT01-61\\Documents\\tokenClass140923\\testConceptFullStack\\back\\Persistence\\Persistence.csproj"
             }
           }
         }
@@ -5219,7 +5217,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
