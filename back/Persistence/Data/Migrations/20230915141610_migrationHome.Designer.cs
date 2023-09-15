@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(TestFullStackDbContext))]
-    [Migration("20230914195228_firstMigration")]
-    partial class firstMigration
+    [Migration("20230915141610_migrationHome")]
+    partial class migrationHome
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

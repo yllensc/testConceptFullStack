@@ -15,6 +15,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddJwt(builder.Configuration);
 builder.Services.AddApplicationServices();
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
+
 //Authorization
 builder.Services.AddAuthorization(opts =>{
     opts.DefaultPolicy = new AuthorizationPolicyBuilder()

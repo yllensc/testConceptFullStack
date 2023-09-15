@@ -13,21 +13,6 @@ D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\Persistence\obj\Deb
 D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\Persistence\obj\Debug\net7.0\refint\Persistence.dll
 D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\Persistence\obj\Debug\net7.0\Persistence.pdb
 d:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\Persistence\obj\Debug\net7.0\ref\Persistence.dll
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.deps.json
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.dll
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.pdb
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Domine.dll
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Domine.pdb
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.csproj.AssemblyReference.cache
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfoInputs.cache
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfo.cs
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.csproj.CoreCompileInputs.cache
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.csproj.CopyComplete
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.dll
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\refint\Persistence.dll
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.pdb
-D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\ref\Persistence.dll
 C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.deps.json
 C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.dll
 C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.pdb
@@ -43,3 +28,18 @@ C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persisten
 C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\refint\Persistence.dll
 C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.pdb
 C:\Users\APT01-61\Documents\tokenClass140923\testConceptFullStack\back\Persistence\obj\Debug\net7.0\ref\Persistence.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.deps.json
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Persistence.pdb
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Domine.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\bin\Debug\net7.0\Domine.pdb
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.csproj.AssemblyReference.cache
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfoInputs.cache
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfo.cs
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.csproj.CoreCompileInputs.cache
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.csproj.CopyComplete
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\refint\Persistence.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\Persistence.pdb
+D:\DATOS DE USUARIO\Documents\Campus\c#\testConceptFullStack\back\Persistence\obj\Debug\net7.0\ref\Persistence.dll

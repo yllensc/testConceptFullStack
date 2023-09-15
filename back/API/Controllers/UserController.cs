@@ -38,6 +38,7 @@ namespace API.Controllers
         [HttpPost("getRefreshToken")]
         public async Task<IActionResult> RefreshToken()
         {
+            
             var refreshToken = Request.Cookies["refreshToken"];
             var response = await _userService.RefreshTokenAsync(refreshToken);
             if (!string.IsNullOrEmpty(response.RefreshToken))

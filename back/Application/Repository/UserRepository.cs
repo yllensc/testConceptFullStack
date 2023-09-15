@@ -16,8 +16,9 @@ public class UserRepository : GenericRepository<User>, IUser
     public async Task<User> GetUserName(string username)
     {
         return await _context.Users
-                            .Include(u => u.Roles)
-                            .FirstOrDefaultAsync(u => u.UserName.ToLower() == username.ToLower());
+                   .Include(u => u.Roles)
+                   .Include(u => u.RefreshTokens)
+                   .FirstOrDefaultAsync(u => u.UserName.ToLower() == username.ToLower());
     }
 
     public async Task<User> GetSomeUserLogic(string id)
@@ -28,12 +29,13 @@ public class UserRepository : GenericRepository<User>, IUser
                             .FirstOrDefaultAsync(u => u.Id == idInt);
     }
 
-    public async Task<User> GetByRefreshTokenAsync(string username)
+    public async Task<User> GetByRefreshTokenAsync(string refreshToken)
     {
         return await _context.Users
-            .Include(u => u.Roles)
-            .Include(u => u.RefreshTokens)
-            .FirstOrDefaultAsync(u => u.UserName.ToLower() == username.ToLower());
+                   .Include(u => u.Roles)
+                   .Include(u => u.RefreshTokens)
+                   .FirstOrDefaultAsync(u => u.RefreshTokens.Any(t => t.Token == refreshToken));
+
     }
 
 
