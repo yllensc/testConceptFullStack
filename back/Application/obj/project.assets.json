@@ -5158,11 +5158,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj",
+      "projectPath": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\obj\\",
+      "outputPath": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5179,11 +5179,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Domine\\Domine.csproj": {
-              "projectPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Domine\\Domine.csproj"
+            "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Domine\\Domine.csproj": {
+              "projectPath": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Domine\\Domine.csproj"
             },
-            "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Persistence\\Persistence.csproj": {
-              "projectPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Persistence\\Persistence.csproj"
+            "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Persistence\\Persistence.csproj"
             }
           }
         }

@@ -5971,11 +5971,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\API\\API.csproj",
+      "projectUniqueName": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\API\\API.csproj",
+      "projectPath": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\API\\obj\\",
+      "outputPath": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5993,8 +5993,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj": {
-              "projectPath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj"
+            "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj": {
+              "projectPath": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\Application\\Application.csproj"
             }
           }
         }

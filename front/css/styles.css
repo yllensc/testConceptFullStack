@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.btn-group {
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin: 0 10px;
+}
+
+.col-md-3 {
+    display: none;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.active .col-md-3 {
+    display: block;
+}
+
+.active button {
+    display: none;
+}
+
+.active .btn-primary {
+    display: block;
+}

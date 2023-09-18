@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YA/MyxJxHIIFvw0LuSPd9z53bMB8MPAVzeBfHP8QCWeb2mBZkGx142mJ572fG2FEewF51EePcff9BuSxVETPwA==",
+  "dgSpecHash": "SM65zADmuhl6uGU598/PupmW+Cqh+MXByDXL7UOqmf6My7PbSG5Ld+LqDJy7jr2yKBs5INv7YX/W3KEl9L6DmQ==",
   "success": true,
-  "projectFilePath": "d:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\API\\API.csproj",
+  "projectFilePath": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\testConceptFullStack\\back\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

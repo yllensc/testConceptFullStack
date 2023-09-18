@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Listado de Clientes</h1>
+    </header>
+    <div class="container">
+        <button id="verClientes" class="btn btn-primary">Ver Clientes</button>
+        <div id="clientesList" class="hidden">
+            <!-- Aquí se mostrará la lista de clientes -->
+        </div>
+    </div>
+    <script>
+        // Simulación de datos de clientes en formato JSON
+        const clientesData = [
+            {
+                nombre: "Cliente 1",
+                telefono: "123-456-7890",
+                cedula: "123456789",
+                correo: "cliente1@example.com"
+            },
+            {
+                nombre: "Cliente 2",
+                telefono: "987-654-3210",
+                cedula: "987654321",
+                correo: "cliente2@example.com"
+            }
+            // Agrega más datos de clientes según sea necesario
+        ];
+
+        const verClientesButton = document.getElementById("verClientes");
+        const clientesList = document.getElementById("clientesList");
+
+        verClientesButton.addEventListener("click", () => {
+            // Limpia el contenido anterior
+            clientesList.innerHTML = "";
+
+            // Genera la lista de clientes desde los datos JSON
+            clientesData.forEach(cliente => {
+                const clienteItem = document.createElement("div");
+                clienteItem.classList.add("cliente-item");
+
+                clienteItem.innerHTML = `
+                    <h2>${cliente.nombre}</h2>
+                    <p>Teléfono: ${cliente.telefono}</p>
+                    <p>Cédula: ${cliente.cedula}</p>
+                    <p>Correo: ${cliente.correo}</p>
+                `;
+
+                clientesList.appendChild(clienteItem);
+            });
+
+            // Muestra la lista de clientes
+            clientesList.classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>
